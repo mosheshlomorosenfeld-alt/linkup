@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linkup — Collabs & Jobs</title>
+<meta name="description" content="Find the best music collaborators and music-industry jobs across every major platform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: loud, happy, confident — a producer's backstage toolkit, not a corporate job board
+   IDEA: a rave flyer / backstage pass: bold yellow field, black ink, pink stamp
+   PICTURE: the working search tools themselves, front and center
+   COLOUR and TYPE: flyer yellow + ink + hot pink accent + cobalt support; Unbounded titles, Inter body
+   LAYOUT: sticky pass-strip nav, three bands (Collabs, Jobs, Tracker), one calm column of controls, wrapping card grids */
+:root{color-scheme:light dark;
+--bg:light-dark(#fffdf4,#0d1240);--card:light-dark(#fff,#151c57);--ink:light-dark(#111,#f4f2ea);--mute:light-dark(#5b5a55,#b7b9d6);
+--yel:#ffd400;--pink:#ff2d87;--cob:light-dark(#2342ff,#8ea0ff);--line:light-dark(#111,#3a4290);--soft:light-dark(#f3efe0,#1c246a)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:Unbounded,Inter,sans-serif;line-height:1.05;text-wrap:balance;margin:0 0 .4em}
+h1{font-size:clamp(34px,6vw,64px);font-weight:800}h2{font-size:clamp(28px,4vw,44px);font-weight:800}h3{font-size:18px;font-weight:600}
+a{color:inherit}
+.band{padding:clamp(28px,4vw,64px) max(5vw,16px)}.wrap{max-width:1240px;margin:0 auto}
+nav{position:sticky;top:0;z-index:5;background:var(--ink);color:var(--bg);display:flex;flex-wrap:wrap;gap:4px 18px;align-items:center;padding:10px max(5vw,16px)}
+nav b{font-family:Unbounded;font-size:18px;margin-right:auto;color:var(--yel)}
+nav a{text-decoration:none;font-weight:600;padding:10px 4px}nav a:hover{color:var(--yel)}
+.hero{background:var(--yel);color:#111}
+.hero p{font-size:18px;max-width:62ch;margin:0}
+.herogrid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;align-items:center}
+.pass{background:#111;color:#fff;border-radius:22px;padding:28px 26px 22px;transform:rotate(4deg);box-shadow:10px 10px 0 var(--pink);position:relative;max-width:360px;justify-self:center;width:100%}
+.pass .hole{width:56px;height:12px;border-radius:99px;background:var(--yel);margin:0 auto 18px}
+.pass small{color:var(--yel);font-weight:700;letter-spacing:.02em}.pass strong{display:block;font:800 24px/1.1 Unbounded,sans-serif;margin:4px 0 16px}
+.pr{display:grid;grid-template-columns:1fr 1fr;gap:12px}.pr span{font-size:13px;color:#cfcfcf}.pr b{display:block;font:800 26px Unbounded,sans-serif;color:#fff}
+.bars{height:34px;margin-top:18px;background:repeating-linear-gradient(90deg,#fff 0 3px,transparent 3px 6px,#fff 6px 7px,transparent 7px 11px);opacity:.85}
+@media(max-width:760px){.herogrid{grid-template-columns:1fr}.pass{transform:rotate(2deg);max-width:300px}}
+.stamp{display:inline-block;font-size:14px;background:var(--pink);color:#fff;font-weight:700;padding:4px 12px;border-radius:999px;transform:rotate(-3deg);margin-bottom:14px}
+.lede{color:var(--mute);max-width:70ch;margin:0 0 22px}
+.panel{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:clamp(16px,2.4vw,28px);box-shadow:6px 6px 0 var(--line)}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px;margin-bottom:16px}
+label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+input,select,textarea{width:100%;font:16px Inter,sans-serif;padding:11px 12px;border:2px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);min-height:44px}
+textarea{min-height:120px;resize:vertical}
+:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.chip{border:2px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:8px 14px;font:600 15px Inter;cursor:pointer;min-height:44px}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.btn{border:2px solid var(--line);background:var(--pink);color:#fff;border-radius:12px;padding:10px 18px;font:700 15px Inter;cursor:pointer;min-height:44px;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn.alt{background:transparent;color:var(--ink)}.btn.sm{padding:6px 12px;min-height:36px;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:14px;margin-top:18px}
+.card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.card p{margin:0;color:var(--mute);font-size:14px}
+.card .go{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
+.tag{font-size:13px;font-weight:700;color:var(--cob)}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:10px;margin-top:28px}
+.sec-head h3{margin:0}
+.alt-band{background:var(--soft)}
+.jobs{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.job{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 14px;align-items:center;background:var(--card);border:2px solid var(--line);border-radius:12px;padding:12px 14px}
+.job small{color:var(--mute)}.job a.t{font-weight:700;text-decoration:none}.job a.t:hover{text-decoration:underline}
+.empty{border:2px dashed var(--line);border-radius:14px;padding:18px;color:var(--mute)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:12px;margin-top:14px}
+.col{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:12px;min-height:120px}
+.col h3{font-size:14px;display:flex;justify-content:space-between}
+.item{border:2px solid var(--line);border-radius:10px;padding:10px;margin-top:8px;background:var(--bg);font-size:14px}
+.item b{display:block;overflow-wrap:anywhere}.item .score{font-family:Unbounded;color:var(--pink);font-size:16px}
+.item .acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.item button{font:600 13px Inter;border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:8px;padding:5px 8px;cursor:pointer;min-height:32px}
+.seg{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
+.sliders{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:10px 16px}
+.sliders input{min-height:auto;padding:0;border:0;accent-color:var(--pink)}
+.out{white-space:pre-wrap;background:var(--bg);border:2px solid var(--line);border-radius:12px;padding:14px;font-size:15px;margin-top:10px}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;font-weight:600;opacity:0;transition:opacity .25s;pointer-events:none;z-index:9}
+.toast.on{opacity:1}
+footer{background:var(--ink);color:var(--bg);font-size:14px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.toast{transition:none}}
+@media(max-width:600px){nav b{width:100%}.job{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><b>LINKUP</b><a href="#collabs">Collabs</a><a href="#jobs">Jobs</a><a href="#tracker">Tracker</a></nav>
+
+<header class="band hero"><div class="wrap herogrid"><div>
+<span class="stamp">TABC Studio 1600 · Rosenfeld Productions</span>
+<h1>Find your next collab.<br>Land your next gig.</h1>
+<p>Pick what you need once — Linkup builds the exact search on every platform that matters, pulls fresh music jobs daily, and ranks the people and roles you save.</p>
+</div>
+<div class="pass" aria-hidden="true"><div class="hole"></div><small>ALL ACCESS</small><strong>Moshe Rosenfeld</strong><div class="pr"><span><b>17</b>collab platforms</span><span><b>22</b>job boards</span><span><b>12</b>label careers</span><span><b>Daily</b>live feed</span></div><div class="bars"></div></div>
+</div></header>
+
+<!-- COLLABS -->
+<section class="band" id="collabs"><div class="wrap">
+<h2>Collaborator finder</h2>
+<p class="lede">Choose a role and a sound. Every card opens a pre-filled search for exactly that person on that platform.</p>
+<div class="panel">
+<label>Who do you need?</label><div class="chips" id="roles"></div>
+<label>What sound?</label><div class="chips" id="genres"></div>
+<div class="row">
+<div><label for="cloc">Where</label><input id="cloc" value="New York"></div>
+<div><label for="cextra">Extra keywords (optional)</label><input id="cextra" placeholder="e.g. female vocalist, Hebrew"></div>
+</div>
+<div class="sec-head"><h3 id="csum">Searches</h3><span class="tag" id="ccount"></span></div>
+<div class="grid" id="cgrid"></div>
+</div>
+
+<div class="sec-head"><h3>Outreach DM</h3></div>
+<div class="panel" style="margin-top:12px">
+<div class="row">
+<div><label for="dmname">Their name / handle</label><input id="dmname" placeholder="@theirhandle"></div>
+<div><label for="dmwhat">What you loved about their work</label><input id="dmwhat" placeholder="your vocal run on the last reel"></div>
+<div><label for="dmtone">Tone</label><select id="dmtone"><option value="fun">Fun & playful</option><option value="pro">Professional</option><option value="warm">Warm & heartfelt</option></select></div>
+</div>
+<div class="out" id="dmout"></div>
+<div class="go" style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap"><button class="btn" id="dmcopy">Copy message</button></div>
+</div>
+</div></section>
+
+<!-- JOBS -->
+<section class="band alt-band" id="jobs"><div class="wrap">
+<h2>Job finder</h2>
+<p class="lede">One search, every job board. Set it once and open each site with your filters already applied — plus a live feed refreshed daily by GitHub Actions.</p>
+<div class="panel">
+<div class="row">
+<div><label for="jq">Role / keywords</label><input id="jq" value="music internship"></div>
+<div><label for="jl">Location</label><input id="jl" value="New York, NY"></div>
+<div><label for="jt">Type</label><select id="jt"><option value="intern">Internship</option><option value="any">Any</option><option value="full">Full-time</option><option value="part">Part-time</option><option value="contract">Contract / gig</option></select></div>
+<div><label for="jd">Posted within</label><select id="jd"><option value="7">Past week</option><option value="1">Past 24 hours</option><option value="30">Past month</option></select></div>
+</div>
+<label>Quick picks</label><div class="chips" id="jpicks"></div>
+<div class="sec-head"><h3>Job boards</h3><span class="tag" id="jcount"></span></div>
+<div class="grid" id="jgrid"></div>
+<div class="sec-head"><h3>Label & industry career pages</h3></div>
+<div class="grid" id="cogrid"></div>
+</div>
+
+<div class="sec-head"><h3>Live feed</h3><span class="tag" id="feedmeta"></span></div>
+<div class="row" style="margin-top:12px"><div><label for="ff">Filter the feed</label><input id="ff" placeholder="type to filter by title, company, place"></div></div>
+<div class="jobs" id="feed"></div>
+</div></section>
+
+<!-- TRACKER -->
+<section class="band" id="tracker"><div class="wrap">
+<h2>Tracker</h2>
+<p class="lede">Save people and jobs, score collaborators on fit, and move everything through your pipeline. Best-fit collaborators float to the top.</p>
+<div class="seg" role="tablist"><button class="chip" data-k="collab" aria-pressed="true">Collaborators</button><button class="chip" data-k="job" aria-pressed="false">Jobs</button></div>
+<div class="panel">
+<div class="row">
+<div><label for="tn">Name / title</label><input id="tn" placeholder="@producername or Job title — Company"></div>
+<div><label for="tl">Link</label><input id="tl" placeholder="https://"></div>
+<div><label for="tnote">Note</label><input id="tnote" placeholder="met at… / deadline…"></div>
+</div>
+<div class="sliders" id="sl"></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;align-items:center"><button class="btn" id="tadd">Save</button><span class="tag" id="fitpreview"></span></div>
+</div>
+<div class="cols" id="board"></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px"><button class="btn alt sm" id="exp">Copy backup</button><button class="btn alt sm" id="imp">Restore from backup</button></div>
+<textarea id="impbox" hidden placeholder="Paste a backup here, then press Restore again"></textarea>
+</div></section>
+
+<footer class="band"><div class="wrap">Linkup · built for Moshe Rosenfeld · live job feed refreshes daily via GitHub Actions. Your tracker is saved in this browser only — use “Copy backup” to move it.</div></footer>
+<div class="toast" id="toast"></div>
+
+<script>
+{
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const E=encodeURIComponent,store={get(k,d){try{return JSON.parse(localStorage.getItem('linkup:'+k))??d}catch{return d}},set(k,v){try{localStorage.setItem('linkup:'+k,JSON.stringify(v))}catch{}}};
+const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove('on'),1800)};
+const copy=async(txt,msg)=>{try{await navigator.clipboard.writeText(txt);toast(msg||'Copied')}catch{toast('Copy blocked — select the text manually')}};
+const g=q=>'https://www.google.com/search?q='+E(q);
+
+/* ---------- COLLABS ---------- */
+const ROLES={vocalist:['Vocalist','singer','singer'],producer:['Producer','music producer','producer'],topliner:['Topliner','topliner songwriter','songwriter'],dj:['DJ','DJ','dj'],mixer:['Mix/master engineer','mixing engineer','mixingengineer'],musician:['Session musician','session musician','sessionmusician'],rapper:['Rapper','rapper','rapper'],video:['Videographer','music videographer','musicvideo'],creator:['Content creator','music content creator','musiccreator']};
+const GENRES={edm:['EDM','EDM','edm'],pop:['Pop','pop','pop'],rave:['Rave / techno','rave techno','rave'],jewish:['Jewish / Yeshiva','Jewish music','jewishmusic'],rnb:['R&B','R&B','rnb'],house:['House','house music','housemusic'],acappella:['A cappella','a cappella','acappella']};
+let cs=store.get('collabSel',{role:'vocalist',genre:'edm'});
+const chipRow=(el,obj,key)=>{el.innerHTML=Object.entries(obj).map(([k,v])=>`<button class="chip" data-v="${k}" aria-pressed="${cs[key]===k}">${esc(v[0])}</button>`).join('');el.onclick=e=>{const b=e.target.closest('.chip');if(!b)return;cs[key]=b.dataset.v;store.set('collabSel',cs);chipRow(el,obj,key);renderCollabs()}};
+const PLAT=[
+{n:'Instagram',d:'Hashtag feed — most active creators post here daily.',u:(q,h,l)=>`https://www.instagram.com/explore/tags/${h}/`,t:'Social'},
+{n:'Instagram (local)',d:'Same sound, your city.',u:(q,h,l,lt)=>`https://www.instagram.com/explore/tags/${lt}${h}/`,t:'Social'},
+{n:'TikTok',d:'Search creators and sounds.',u:q=>`https://www.tiktok.com/search/user?q=${E(q)}`,t:'Social'},
+{n:'YouTube',d:'Channels only — see full performances.',u:q=>`https://www.youtube.com/results?search_query=${E(q)}&sp=EgIQAg%253D%253D`,t:'Social'},
+{n:'SoundCloud',d:'People search — huge for EDM & rave.',u:q=>`https://soundcloud.com/search/people?q=${E(q)}`,t:'Music'},
+{n:'Spotify',d:'Released artists in this lane.',u:q=>`https://open.spotify.com/search/${E(q)}/artists`,t:'Music'},
+{n:'BandLab',d:'Creators who already collab online.',u:q=>g(`site:bandlab.com ${q}`),t:'Music'},
+{n:'SoundBetter',d:'Vetted pros with reviews & rates.',u:q=>g(`site:soundbetter.com ${q}`),t:'Hire'},
+{n:'Fiverr',d:'Fast paid sessions, fixed prices.',u:q=>`https://www.fiverr.com/search/gigs?query=${E(q)}`,t:'Hire'},
+{n:'AirGigs',d:'Session singers & players for hire.',u:q=>g(`site:airgigs.com ${q}`),t:'Hire'},
+{n:'Backstage',d:'Local talent and casting profiles.',u:(q,h,l)=>g(`site:backstage.com ${q} ${l}`),t:'Local'},
+{n:'LinkedIn',d:'Industry people near you.',u:(q,h,l)=>`https://www.linkedin.com/search/results/people/?keywords=${E(q+' '+l)}`,t:'Local'},
+{n:'Reddit',d:'r/musicians, r/edmproduction & more.',u:q=>`https://www.reddit.com/search/?q=${E(q+' collab')}`,t:'Community'},
+{n:'X / Twitter',d:'Accounts matching your lane.',u:q=>`https://x.com/search?q=${E(q)}&f=user`,t:'Social'},
+{n:'Discord servers',d:'Producer & vocalist communities.',u:q=>`https://disboard.org/search?keyword=${E(q)}`,t:'Community'},
+{n:'Kompoz',d:'Online collab projects.',u:q=>g(`site:kompoz.com ${q}`),t:'Community'},
+{n:'Google (wide net)',d:'Everything else, local first.',u:(q,h,l)=>g(`${q} ${l} collab OR collaboration -jobs`),t:'Web'}];
+const renderCollabs=()=>{
+const r=ROLES[cs.role],ge=GENRES[cs.genre],l=$('#cloc').value.trim(),x=$('#cextra').value.trim();
+const q=[ge[1],r[1],x].filter(Boolean).join(' '),h=(ge[2]+r[2]).toLowerCase(),lt=l.toLowerCase().replace(/[^a-z]/g,'').replace(/^newyork(city)?$/,'nyc');
+$('#csum').textContent=`${ge[0]} ${r[0].toLowerCase()}s${l?' · '+l:''}`;$('#ccount').textContent=PLAT.length+' searches';
+$('#cgrid').innerHTML=PLAT.map(p=>`<div class="card"><span class="tag">${p.t}</span><h3>${esc(p.n)}</h3><p>${esc(p.d)}</p><div class="go"><a class="btn sm" href="${esc(p.u(q,h,l,lt))}" target="_blank" rel="noopener">Open ↗</a><button class="btn alt sm" data-save="${esc(p.n)}" data-url="${esc(p.u(q,h,l,lt))}">Save search</button></div></div>`).join('');
+renderDM()};
+$('#cgrid').onclick=e=>{const b=e.target.closest('[data-save]');if(!b)return;addItem({kind:'collab',name:`${$('#csum').textContent} — ${b.dataset.save}`,link:b.dataset.url,note:'Saved search'});toast('Saved to tracker')};
+['#cloc','#cextra'].forEach(s=>$(s).addEventListener('input',renderCollabs));
+const renderDM=()=>{const r=ROLES[cs.role][0].toLowerCase(),ge=GENRES[cs.genre][0],n=$('#dmname').value.trim()||'[name]',w=$('#dmwhat').value.trim()||'your last post',t=$('#dmtone').value;
+const M={fun:`Yo ${n}! 🔥 Just caught ${w} — had it on repeat. I'm Moshe, a producer/singer working out of TABC Studio 1600 on ${ge} records. I've got a track that's begging for a ${r} with your energy. Down to hear a 30-sec preview? No pressure either way 🙌`,
+pro:`Hi ${n}, I'm Moshe Rosenfeld — producer and singer with Rosenfeld Productions (TABC Studio 1600). I came across ${w} and was really impressed. I'm working on a ${ge} project and looking for a ${r}. Would you be open to a quick call or for me to send a demo? Happy to discuss credits and terms up front.`,
+warm:`Hey ${n}, I just wanted to say ${w} genuinely moved me. I'm Moshe, a singer and producer making ${ge} music, and I'd love to create something with a ${r} who brings that kind of heart. If you're open to it, I'd love to send you an idea. Either way, keep doing what you do.`};
+$('#dmout').textContent=M[t]};
+['#dmname','#dmwhat','#dmtone'].forEach(s=>$(s).addEventListener('input',renderDM));
+$('#dmcopy').onclick=()=>copy($('#dmout').textContent,'Message copied');
+
+/* ---------- JOBS ---------- */
+const JT={intern:{li:'I',in:'internship',zr:'Internship',w:'internship'},full:{li:'F',in:'fulltime',zr:'Full-Time',w:''},part:{li:'P',in:'parttime',zr:'Part-Time',w:'part time'},contract:{li:'C',in:'contract',zr:'Contract',w:'contract'},any:{li:'',in:'',zr:'',w:''}};
+const BOARDS=[
+{n:'LinkedIn Jobs',t:'Biggest',u:(q,l,j,d)=>`https://www.linkedin.com/jobs/search/?keywords=${E(q)}&location=${E(l)}&f_TPR=r${d*86400}${j.li?'&f_JT='+j.li:''}`},
+{n:'Indeed',t:'Biggest',u:(q,l,j,d)=>`https://www.indeed.com/jobs?q=${E(q)}&l=${E(l)}&fromage=${d}${j.in?'&jt='+j.in:''}`},
+{n:'Google Jobs',t:'Aggregator',u:(q,l,j,d)=>`https://www.google.com/search?q=${E(`${q} ${j.w} jobs near ${l}`)}&ibp=htl;jobs`},
+{n:'Glassdoor',t:'Biggest',u:(q,l)=>`https://www.glassdoor.com/Job/jobs.htm?sc.keyword=${E(q)}&locKeyword=${E(l)}`},
+{n:'ZipRecruiter',t:'Biggest',u:(q,l,j,d)=>`https://www.ziprecruiter.com/jobs-search?search=${E(q)}&location=${E(l)}&days=${d}${j.zr?'&employment_type='+E(j.zr):''}`},
+{n:'Monster',t:'General',u:(q,l)=>`https://www.monster.com/jobs/search?q=${E(q)}&where=${E(l)}`},
+{n:'SimplyHired',t:'General',u:(q,l)=>`https://www.simplyhired.com/search?q=${E(q)}&l=${E(l)}`},
+{n:'Snagajob',t:'Part-time',u:(q,l)=>`https://www.snagajob.com/search?q=${E(q)}&w=${E(l)}`},
+{n:'Handshake',t:'Students',u:q=>`https://app.joinhandshake.com/stu/postings?query=${E(q)}`},
+{n:'Idealist',t:'Nonprofit',u:q=>`https://www.idealist.org/en/jobs?q=${E(q)}`},
+{n:'Built In NYC',t:'Tech & media',u:q=>`https://www.builtinnyc.com/jobs?search=${E(q)}`},
+{n:'USAJobs',t:'Government',u:(q,l)=>`https://www.usajobs.gov/Search/Results?k=${E(q)}&l=${E(l)}`},
+{n:'Upwork',t:'Freelance',u:q=>`https://www.upwork.com/nx/search/jobs/?q=${E(q)}`},
+{n:'Craigslist NYC gigs',t:'Local gigs',u:q=>`https://newyork.craigslist.org/search/ggg?query=${E(q)}`},
+{n:'EntertainmentCareers.net',t:'Music & media',u:(q,l)=>g(`site:entertainmentcareers.net ${q} ${l}`)},
+{n:'Music Business Worldwide',t:'Music industry',u:q=>g(`site:musicbusinessworldwide.com jobs ${q}`)},
+{n:'Backstage',t:'Performers',u:(q,l)=>g(`site:backstage.com ${q} ${l}`)},
+{n:'Mandy',t:'Production crew',u:(q,l)=>g(`site:mandy.com ${q} ${l}`)},
+{n:'Wellfound',t:'Startups',u:q=>g(`site:wellfound.com/jobs ${q}`)},
+{n:'JewishJobs',t:'Jewish orgs',u:q=>g(`site:jewishjobs.com ${q}`)},
+{n:'WayUp',t:'Students',u:q=>g(`site:wayup.com ${q}`)},
+{n:'Every ATS at once',t:'Hidden jobs',u:(q,l)=>g(`(site:boards.greenhouse.io OR site:jobs.lever.co OR site:myworkdayjobs.com OR site:jobs.ashbyhq.com) "${q}" "${l.split(',')[0]}"`)}];
+const COS=[['Universal Music Group','https://www.universalmusic.com/careers/'],['Sony Music','https://www.sonymusic.com/careers/'],['Warner Music Group','https://www.wmg.com/careers'],['Spotify','https://www.lifeatspotify.com/jobs'],['Live Nation','https://www.livenationentertainment.com/careers/'],['Atlantic Records','https://www.atlanticrecords.com/'],['Recording Academy','https://www.recordingacademy.com/careers'],['SiriusXM / Pandora','https://careers.siriusxm.com/'],['iHeartMedia','https://www.iheartmedia.com/careers'],['BMI','https://www.bmi.com/careers'],['ASCAP','https://www.ascap.com/about-us/careers'],['Madison Square Garden Ent.','https://www.msgentertainment.com/careers/']];
+const PICKS=['music internship','A&R intern','recording studio intern','music production','audio engineer','social media music','music marketing','event production','DJ','music teacher','sound technician','artist management'];
+let js=store.get('jobSel',{q:'music internship',l:'New York, NY',t:'intern',d:'7'});
+['q','l','t','d'].forEach(k=>$('#j'+k).value=js[k]);
+const renderJobs=()=>{['q','l','t','d'].forEach(k=>js[k]=$('#j'+k).value);store.set('jobSel',js);
+const q=js.q.trim()||'music',l=js.l.trim(),j=JT[js.t],d=+js.d,q2=js.t!=='any'&&j.w&&!q.toLowerCase().includes(j.w)?`${q} ${j.w}`:q;
+$('#jpicks').innerHTML=PICKS.map(p=>`<button class="chip" data-p="${esc(p)}" aria-pressed="${p===q}">${esc(p)}</button>`).join('');
+$('#jcount').textContent=BOARDS.length+' boards';
+$('#jgrid').innerHTML=BOARDS.map(b=>{const native=/linkedin|indeed|google|ziprecruiter/i.test(b.n);const url=b.u(native?q:q2,l,j,d);return `<div class="card"><span class="tag">${esc(b.t)}</span><h3>${esc(b.n)}</h3><div class="go"><a class="btn sm" href="${esc(url)}" target="_blank" rel="noopener">Search ↗</a><button class="btn alt sm" data-save="${esc(b.n)}" data-url="${esc(url)}">Save</button></div></div>`}).join('');
+$('#cogrid').innerHTML=COS.map(([n,u])=>`<div class="card"><h3>${esc(n)}</h3><div class="go"><a class="btn alt sm" href="${u}" target="_blank" rel="noopener">Careers ↗</a></div></div>`).join('')};
+['#jq','#jl','#jt','#jd'].forEach(s=>$(s).addEventListener('input',renderJobs));
+$('#jpicks').onclick=e=>{const b=e.target.closest('[data-p]');if(!b)return;$('#jq').value=b.dataset.p;renderJobs()};
+$('#jgrid').onclick=e=>{const b=e.target.closest('[data-save]');if(!b)return;addItem({kind:'job',name:`${js.q} — ${b.dataset.save} search`,link:b.dataset.url,note:js.l});toast('Saved to tracker')};
+
+/* live feed from data/jobs.json (written by GitHub Actions) */
+let FEED=[];
+const ago=s=>{const t=Date.parse(s);if(!t)return'';const d=Math.floor((Date.now()-t)/864e5);return d<=0?'today':d===1?'1 day ago':d+' days ago'};
+const renderFeed=()=>{const f=$('#ff').value.toLowerCase().trim();const rows=FEED.filter(j=>!f||[j.title,j.company,j.location,j.source].join(' ').toLowerCase().includes(f)).slice(0,150);
+$('#feed').innerHTML=rows.length?rows.map((j,i)=>`<div class="job"><div><a class="t" href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a><br><small>${esc(j.company)} · ${esc(j.location||'—')} · ${esc(j.source)}${j.posted?' · '+esc(ago(j.posted)):''}</small></div><button class="btn alt sm" data-fi="${FEED.indexOf(j)}">Save</button></div>`).join(''):`<div class="empty">${FEED.length?'No feed jobs match that filter.':'The live feed fills in automatically once this site runs on GitHub Pages — the daily “Fetch jobs” Action writes fresh listings to <b>data/jobs.json</b>. Until then, use the job boards above.'}</div>`};
+$('#ff').addEventListener('input',renderFeed);
+$('#feed').onclick=e=>{const b=e.target.closest('[data-fi]');if(!b)return;const j=FEED[+b.dataset.fi];addItem({kind:'job',name:`${j.title} — ${j.company}`,link:j.url,note:j.location});toast('Saved to tracker')};
+fetch('data/jobs.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{if(d&&Array.isArray(d.jobs)){FEED=d.jobs;$('#feedmeta').textContent=d.updated?`${d.jobs.length} jobs · updated ${ago(d.updated)}`:''}renderFeed()}).catch(renderFeed);
+
+/* ---------- TRACKER ---------- */
+const STAGES={collab:['Saved','DM sent','Talking','Session booked','Pass'],job:['Saved','Applied','Interview','Offer','Closed']};
+const CRIT=[['genre','Genre fit',3],['quality','Quality',3],['reach','Audience reach',2],['vibe','Vibe / reliability',2]];
+let items=store.get('items',[]),kind='collab';
+const fit=s=>s?Math.round(CRIT.reduce((a,[k,,w])=>a+(+s[k]||0)*w,0)/CRIT.reduce((a,[,,w])=>a+w*5,0)*100):null;
+const sliders=()=>{$('#sl').innerHTML=kind==='collab'?CRIT.map(([k,n])=>`<div><label for="s_${k}">${n}: <span id="v_${k}">3</span>/5</label><input type="range" id="s_${k}" min="1" max="5" value="3"></div>`).join(''):'';
+$('#sl').querySelectorAll('input').forEach(i=>i.oninput=()=>{$('#v_'+i.id.slice(2)).textContent=i.value;prev()});prev()};
+const cur=()=>kind==='collab'?Object.fromEntries(CRIT.map(([k])=>[k,+$('#s_'+k).value])):null;
+const prev=()=>{$('#fitpreview').textContent=kind==='collab'?`Fit score: ${fit(cur())}`:''};
+function addItem(o){items.unshift({id:Date.now()+''+Math.random().toString(36).slice(2,6),stage:0,date:new Date().toISOString().slice(0,10),scores:null,...o});store.set('items',items);renderBoard()}
+$('#tadd').onclick=()=>{const n=$('#tn').value.trim();if(!n){$('#tn').focus();return toast('Add a name first')}addItem({kind,name:n,link:$('#tl').value.trim(),note:$('#tnote').value.trim(),scores:cur()});['#tn','#tl','#tnote'].forEach(s=>$(s).value='');toast('Saved')};
+document.querySelector('.seg').onclick=e=>{const b=e.target.closest('[data-k]');if(!b)return;kind=b.dataset.k;document.querySelectorAll('.seg .chip').forEach(c=>c.setAttribute('aria-pressed',c===b));sliders();renderBoard()};
+const renderBoard=()=>{const st=STAGES[kind],mine=items.filter(i=>i.kind===kind).sort((a,b)=>(fit(b.scores)??-1)-(fit(a.scores)??-1));
+$('#board').innerHTML=st.map((s,si)=>{const col=mine.filter(i=>i.stage===si);return `<div class="col"><h3><span>${s}</span><span>${col.length}</span></h3>${col.map(i=>`<div class="item">${fit(i.scores)!=null?`<span class="score">${fit(i.scores)}</span>`:''}<b>${i.link&&/^https?:/i.test(i.link)?`<a href="${esc(i.link)}" target="_blank" rel="noopener">${esc(i.name)}</a>`:esc(i.name)}</b>${i.note?`<small>${esc(i.note)}</small><br>`:''}<small>${esc(i.date)}</small><div class="acts">${si>0?`<button data-mv="-1" data-id="${i.id}">◀</button>`:''}${si<st.length-1?`<button data-mv="1" data-id="${i.id}">▶ ${st[si+1]}</button>`:''}<button data-del="${i.id}">Remove</button></div></div>`).join('')||'<p style="color:var(--mute);font-size:14px;margin:8px 0 0">Empty</p>'}</div>`}).join('')};
+let undo=null;
+$('#board').onclick=e=>{const m=e.target.closest('[data-mv]'),d=e.target.closest('[data-del]');
+if(m){const it=items.find(i=>i.id===m.dataset.id);it.stage=Math.max(0,Math.min(STAGES[it.kind].length-1,it.stage+ +m.dataset.mv));}
+if(d){const ix=items.findIndex(i=>i.id===d.dataset.del);undo=items[ix];items.splice(ix,1);toast('Removed — press Ctrl+Z to undo')}
+store.set('items',items);renderBoard()};
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key==='z'&&undo&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)){items.unshift(undo);undo=null;store.set('items',items);renderBoard();toast('Restored')}});
+$('#exp').onclick=()=>copy(JSON.stringify(items),'Backup copied — paste it somewhere safe');
+$('#imp').onclick=()=>{const b=$('#impbox');if(b.hidden){b.hidden=false;b.focus();return}try{const v=JSON.parse(b.value);if(!Array.isArray(v))throw 0;items=v;store.set('items',items);renderBoard();b.hidden=true;b.value='';toast('Restored '+v.length+' items')}catch{toast('That backup doesn’t look right')}};
+
+chipRow($('#roles'),ROLES,'role');chipRow($('#genres'),GENRES,'genre');renderCollabs();renderJobs();sliders();renderBoard();
+}
+</script>
+</body>
+</html>
