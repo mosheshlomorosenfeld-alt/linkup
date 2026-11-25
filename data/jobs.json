@@ -1,1 +1,175 @@
-{"updated": null, "sources": {}, "jobs": []}
+{
+ "updated": "2026-11-25T20:30:18+00:00",
+ "sources": {
+  "remotive": 0,
+  "themuse": "error: HTTP Error 404: Not Found",
+  "arbeitnow": 9,
+  "jobicy": 11,
+  "himalayas": 0,
+  "serpapi_google_jobs": 0,
+  "adzuna": 0,
+  "usajobs": 0
+ },
+ "jobs": [
+  {
+   "title": "Founder & CEO — AI Complaint Resolution",
+   "company": "Founders Factory",
+   "location": "London",
+   "url": "https://www.arbeitnow.co.uk/jobs/companies/founders-factory/founder-ceo-ai-complaint-resolution-london-261649",
+   "source": "Arbeitnow",
+   "posted": "2026-11-25T15:40:17+00:00"
+  },
+  {
+   "title": "Founder & CEO — AI-Native Captive in a Box",
+   "company": "Founders Factory",
+   "location": "London",
+   "url": "https://www.arbeitnow.co.uk/jobs/companies/founders-factory/founder-ceo-ai-native-captive-in-a-box-london-29177",
+   "source": "Arbeitnow",
+   "posted": "2026-11-25T15:40:17+00:00"
+  },
+  {
+   "title": "Founder & CEO — Pet Care AI",
+   "company": "Founders Factory",
+   "location": "London",
+   "url": "https://www.arbeitnow.co.uk/jobs/companies/founders-factory/founder-ceo-pet-care-ai-london-243149",
+   "source": "Arbeitnow",
+   "posted": "2026-11-25T15:40:17+00:00"
+  },
+  {
+   "title": "Founder & CEO — Group Buying Agent Protocol",
+   "company": "Founders Factory",
+   "location": "London",
+   "url": "https://www.arbeitnow.co.uk/jobs/companies/founders-factory/founder-ceo-group-buying-agent-protocol-london-92908",
+   "source": "Arbeitnow",
+   "posted": "2026-11-25T15:40:17+00:00"
+  },
+  {
+   "title": "Crux - Video and Audio Raters - German (Germany)",
+   "company": "Welo Global",
+   "location": "Germany",
+   "url": "https://jobicy.com/jobs/164279-crux-video-and-audio-raters-german-germany",
+   "source": "Jobicy",
+   "posted": "2026-11-25T13:23:54+00:00"
+  },
+  {
+   "title": "Crux - Video and Audio Raters - French (France)",
+   "company": "Welo Global",
+   "location": "France",
+   "url": "https://jobicy.com/jobs/164278-crux-video-and-audio-raters-french-france",
+   "source": "Jobicy",
+   "posted": "2026-11-25T13:23:52+00:00"
+  },
+  {
+   "title": "Senior UI/ UX Artist Freelance Talent Pool (2027)",
+   "company": "Keywords Intl1",
+   "location": "Netherlands",
+   "url": "https://www.arbeitnow.nl/jobs/companies/keywords-intl1/remote-senior-ui-ux-artist-freelance-talent-pool-2027-netherlands-147530",
+   "source": "Arbeitnow",
+   "posted": "2026-11-25T13:20:12+00:00"
+  },
+  {
+   "title": "Senior Technical/ VFX Artist - Freelance Talent Pool (2027 Opportunities)",
+   "company": "Keywords Intl1",
+   "location": "Netherlands",
+   "url": "https://www.arbeitnow.nl/jobs/companies/keywords-intl1/remote-senior-technical-vfx-artist-freelance-talent-pool-2027-opportunities-netherlands-243915",
+   "source": "Arbeitnow",
+   "posted": "2026-11-25T13:20:12+00:00"
+  },
+  {
+   "title": "Senior Character Artist - Freelance Talent Pool (2027 Opportunities)",
+   "company": "Keywords Intl1",
+   "location": "Netherlands",
+   "url": "https://www.arbeitnow.nl/jobs/companies/keywords-intl1/remote-senior-character-artist-freelance-talent-pool-2027-opportunities-netherlands-104704",
+   "source": "Arbeitnow",
+   "posted": "2026-11-25T13:20:12+00:00"
+  },
+  {
+   "title": "Senior 3D Environment Artist - Freelance Talent Pool (2027 Opportunities)",
+   "company": "Keywords Intl1",
+   "location": "Netherlands",
+   "url": "https://www.arbeitnow.nl/jobs/companies/keywords-intl1/remote-senior-3d-environment-artist-freelance-talent-pool-2027-opportunities-netherlands-205374",
+   "source": "Arbeitnow",
+   "posted": "2026-11-25T13:20:12+00:00"
+  },
+  {
+   "title": "Content Producer/in Social Media (100 %)",
+   "company": "two.jobs",
+   "location": "Zürich",
+   "url": "https://www.arbeitnow.ch/jobs/companies/twojobs/content-producer-in-social-media-100-zurich-483196",
+   "source": "Arbeitnow",
+   "posted": "2026-11-24T11:00:44+00:00"
+  },
+  {
+   "title": "International Audio/Video Remote Hakha Chin Interpreter",
+   "company": "Language Services Associates",
+   "location": "Anywhere",
+   "url": "https://jobicy.com/jobs/153916-international-audio-video-remote-hakha-chin-interpreter",
+   "source": "Jobicy",
+   "posted": "2026-11-24T04:25:48+00:00"
+  },
+  {
+   "title": "Audio Engineering (Freelance)",
+   "company": "Elevenlabs",
+   "location": "Poland, UK, USA",
+   "url": "https://jobicy.com/jobs/156709-audio-engineering-freelance",
+   "source": "Jobicy",
+   "posted": "2026-11-24T04:25:32+00:00"
+  },
+  {
+   "title": "International Audio/Video Remote Karen and Thai Interpreter",
+   "company": "Language Services Associates",
+   "location": "Anywhere",
+   "url": "https://jobicy.com/jobs/153919-international-audio-video-remote-karen-and-thai-interpreter",
+   "source": "Jobicy",
+   "posted": "2026-11-24T04:25:11+00:00"
+  },
+  {
+   "title": "Crux - Video and Audio QA - French (France)",
+   "company": "Welo Global",
+   "location": "France",
+   "url": "https://jobicy.com/jobs/163823-crux-video-and-audio-qa-french-france",
+   "source": "Jobicy",
+   "posted": "2026-11-22T05:58:55+00:00"
+  },
+  {
+   "title": "Andromeda Delta - Audio Transcription QA Turkish (Turkey)",
+   "company": "Welo Global",
+   "location": "Türkiye",
+   "url": "https://jobicy.com/jobs/163820-andromeda-delta-audio-transcription-qa-turkish-turkey",
+   "source": "Jobicy",
+   "posted": "2026-11-22T05:58:39+00:00"
+  },
+  {
+   "title": "General Manager, Communication, Media, Entertainment and Technology",
+   "company": "Toptal",
+   "location": "UK",
+   "url": "https://jobicy.com/jobs/163812-general-manager-communication-media-entertainment-and-technology",
+   "source": "Jobicy",
+   "posted": "2026-11-22T05:56:42+00:00"
+  },
+  {
+   "title": "Senior Product Manager - Audiobooks Format Foundations",
+   "company": "Spotify",
+   "location": "Sweden, UK",
+   "url": "https://jobicy.com/jobs/156179-senior-product-manager-audiobooks-format-foundations",
+   "source": "Jobicy",
+   "posted": "2026-11-21T03:20:36+00:00"
+  },
+  {
+   "title": "Field CTO, Media & Entertainment AI Infrastructure",
+   "company": "Nebius",
+   "location": "USA",
+   "url": "https://jobicy.com/jobs/163568-field-cto-media-entertainment-ai-infrastructure",
+   "source": "Jobicy",
+   "posted": "2026-11-20T16:44:58+00:00"
+  },
+  {
+   "title": "Crux - Video and Audio QA - German (Germany)",
+   "company": "Welo Global",
+   "location": "Germany",
+   "url": "https://jobicy.com/jobs/163459-crux-video-and-audio-qa-german-germany",
+   "source": "Jobicy",
+   "posted": "2026-11-20T08:39:50+00:00"
+  }
+ ]
+}
