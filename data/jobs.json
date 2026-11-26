@@ -1,47 +1,87 @@
 {
- "updated": "2026-11-25T20:30:18+00:00",
+ "updated": "2026-11-26T20:14:00+00:00",
  "sources": {
   "remotive": 0,
   "themuse": "error: HTTP Error 404: Not Found",
-  "arbeitnow": 9,
-  "jobicy": 11,
-  "himalayas": 0,
+  "arbeitnow": 12,
+  "jobicy": 12,
+  "himalayas": 1,
   "serpapi_google_jobs": 0,
   "adzuna": 0,
   "usajobs": 0
  },
  "jobs": [
   {
-   "title": "Founder & CEO — AI Complaint Resolution",
-   "company": "Founders Factory",
-   "location": "London",
-   "url": "https://www.arbeitnow.co.uk/jobs/companies/founders-factory/founder-ceo-ai-complaint-resolution-london-261649",
-   "source": "Arbeitnow",
-   "posted": "2026-11-25T15:40:17+00:00"
+   "title": "Key Account Manager - Entertainment Lighting",
+   "company": "Signify",
+   "location": "United States",
+   "url": "https://himalayas.app/companies/signify/jobs/key-account-manager-entertainment-lighting-5347495986?utm_source=api",
+   "source": "Himalayas",
+   "posted": "2026-11-26T19:01:33+00:00"
   },
   {
-   "title": "Founder & CEO — AI-Native Captive in a Box",
-   "company": "Founders Factory",
-   "location": "London",
-   "url": "https://www.arbeitnow.co.uk/jobs/companies/founders-factory/founder-ceo-ai-native-captive-in-a-box-london-29177",
+   "title": "3D Concept & Visualization Artist (m/f/d) (Freelance / Working Student)",
+   "company": "Dufour Aerospace",
+   "location": "Dübendorf",
+   "url": "https://www.arbeitnow.ch/jobs/companies/dufour-aerospace/3d-concept-visualization-artist-freelance-working-student-dubendorf-492490",
    "source": "Arbeitnow",
-   "posted": "2026-11-25T15:40:17+00:00"
+   "posted": "2026-11-26T16:01:03+00:00"
   },
   {
-   "title": "Founder & CEO — Pet Care AI",
-   "company": "Founders Factory",
+   "title": "Senior Account Executive - Consumer Tech",
+   "company": "Axicom",
    "location": "London",
-   "url": "https://www.arbeitnow.co.uk/jobs/companies/founders-factory/founder-ceo-pet-care-ai-london-243149",
+   "url": "https://www.arbeitnow.co.uk/jobs/companies/axicom/senior-account-executive-consumer-tech-london-232929",
    "source": "Arbeitnow",
-   "posted": "2026-11-25T15:40:17+00:00"
+   "posted": "2026-11-26T15:55:21+00:00"
   },
   {
-   "title": "Founder & CEO — Group Buying Agent Protocol",
-   "company": "Founders Factory",
-   "location": "London",
-   "url": "https://www.arbeitnow.co.uk/jobs/companies/founders-factory/founder-ceo-group-buying-agent-protocol-london-92908",
+   "title": "Associate Director, Music Policy, Spotify for Artists",
+   "company": "Spotify",
+   "location": "LATAM, Canada, USA",
+   "url": "https://jobicy.com/jobs/164419-associate-director-music-policy-spotify-for-artists",
+   "source": "Jobicy",
+   "posted": "2026-11-26T14:35:12+00:00"
+  },
+  {
+   "title": "Lead Video Producer (x/f/m)",
+   "company": "Doctolib",
+   "location": "Paris",
+   "url": "https://www.arbeitnow.fr/jobs/companies/doctolib/lead-video-producer-levallois-perret-319144",
    "source": "Arbeitnow",
-   "posted": "2026-11-25T15:40:17+00:00"
+   "posted": "2026-11-26T09:40:16+00:00"
+  },
+  {
+   "title": "Focus Entertainment Publishing - Communication Director (H/F/Nb)",
+   "company": "Pullup Entertainment",
+   "location": "Paris, Île-de-France, France",
+   "url": "https://www.arbeitnow.fr/jobs/companies/pullup-entertainment/focus-entertainment-publishing-communication-director-b-paris-387828",
+   "source": "Arbeitnow",
+   "posted": "2026-11-26T03:51:53+00:00"
+  },
+  {
+   "title": "Focus Entertainment - Stage - Media Buying Assistant (H/F/Nb)",
+   "company": "Pullup Entertainment",
+   "location": "Paris, Île-de-France, France",
+   "url": "https://www.arbeitnow.fr/jobs/companies/pullup-entertainment/focus-entertainment-stage-media-buying-assistant-b-paris-68645",
+   "source": "Arbeitnow",
+   "posted": "2026-11-26T03:51:53+00:00"
+  },
+  {
+   "title": "(Senior) Account Executive (m/w/d) - im Bereich Technology",
+   "company": "Bursonglobalcareers",
+   "location": "Frankfurt am Main, Hesse",
+   "url": "https://www.arbeitnow.com/jobs/companies/bursonglobalcareers/senior-account-executive-im-bereich-technology-frankfurt-am-main-hesse-270950",
+   "source": "Arbeitnow",
+   "posted": "2026-11-25T21:55:39+00:00"
+  },
+  {
+   "title": "Head of Technology Practice",
+   "company": "Bursonglobalcareers",
+   "location": "Paris, Paris",
+   "url": "https://www.arbeitnow.fr/jobs/companies/bursonglobalcareers/head-of-technology-practice-paris-paris-438178",
+   "source": "Arbeitnow",
+   "posted": "2026-11-25T21:55:34+00:00"
   },
   {
    "title": "Crux - Video and Audio Raters - German (Germany)",
