@@ -1,10 +1,10 @@
 {
- "updated": "2026-11-26T20:14:00+00:00",
+ "updated": "2026-11-27T20:00:06+00:00",
  "sources": {
   "remotive": 0,
   "themuse": "error: HTTP Error 404: Not Found",
-  "arbeitnow": 12,
-  "jobicy": 12,
+  "arbeitnow": 9,
+  "jobicy": 32,
   "himalayas": 1,
   "serpapi_google_jobs": 0,
   "adzuna": 0,
@@ -12,12 +12,60 @@
  },
  "jobs": [
   {
-   "title": "Key Account Manager - Entertainment Lighting",
-   "company": "Signify",
-   "location": "United States",
-   "url": "https://himalayas.app/companies/signify/jobs/key-account-manager-entertainment-lighting-5347495986?utm_source=api",
+   "title": "YouTube & Podcast Growth Marketer - Remote (LATAM) #LL1",
+   "company": "Elevate Teams",
+   "location": "Anguilla, Antigua and Barbuda, Argentina, Aruba, Bahamas, Barbados, Belize, Bermuda, Bolivia, Bonair",
+   "url": "https://himalayas.app/companies/elevate-teams/jobs/youtube-podcast-growth-marketer-remote-latam-ll1?utm_source=api",
    "source": "Himalayas",
-   "posted": "2026-11-26T19:01:33+00:00"
+   "posted": "2026-11-27T18:55:08+00:00"
+  },
+  {
+   "title": "CTO Cofounder - PreSeed PropTech Berlin",
+   "company": "Founders Factory",
+   "location": "Berlin",
+   "url": "https://www.arbeitnow.com/jobs/companies/founders-factory/cto-cofounder-preseed-proptech-berlin-467923",
+   "source": "Arbeitnow",
+   "posted": "2026-11-27T09:40:18+00:00"
+  },
+  {
+   "title": "AI software Engineer - Project Tricorder",
+   "company": "Founders Factory",
+   "location": "Bristol/London/UK",
+   "url": "https://www.arbeitnow.co.uk/jobs/companies/founders-factory/ai-software-engineer-project-tricorder-london-136479",
+   "source": "Arbeitnow",
+   "posted": "2026-11-27T09:40:18+00:00"
+  },
+  {
+   "title": "Fractional Chief Medical Officer - Tricorder Systems",
+   "company": "Founders Factory",
+   "location": "Bristol/London/UK",
+   "url": "https://www.arbeitnow.co.uk/jobs/companies/founders-factory/fractional-chief-medical-officer-tricorder-systems-london-475535",
+   "source": "Arbeitnow",
+   "posted": "2026-11-27T09:40:18+00:00"
+  },
+  {
+   "title": "AppSec Engineer",
+   "company": "Fever",
+   "location": "Spain",
+   "url": "https://jobicy.com/jobs/164496-appsec-engineer-2",
+   "source": "Jobicy",
+   "posted": "2026-11-27T09:32:24+00:00"
+  },
+  {
+   "title": "3D Game Artist - Core - Puzzle Unit",
+   "company": "Voodoo",
+   "location": "Paris",
+   "url": "https://www.arbeitnow.fr/jobs/companies/voodoo/3d-game-artist-core-puzzle-unit-paris-212488",
+   "source": "Arbeitnow",
+   "posted": "2026-11-27T00:40:13+00:00"
+  },
+  {
+   "title": "Brazilian Subject Matter Expert in Fandoms (Music, Pop, Disney & Political Memes)",
+   "company": "Welo Global",
+   "location": "Brazil",
+   "url": "https://jobicy.com/jobs/164467-brazilian-subject-matter-expert-in-fandoms-music-pop-disney-political-memes",
+   "source": "Jobicy",
+   "posted": "2026-11-26T20:44:32+00:00"
   },
   {
    "title": "3D Concept & Visualization Artist (m/f/d) (Freelance / Working Student)",
@@ -28,12 +76,28 @@
    "posted": "2026-11-26T16:01:03+00:00"
   },
   {
-   "title": "Senior Account Executive - Consumer Tech",
-   "company": "Axicom",
-   "location": "London",
-   "url": "https://www.arbeitnow.co.uk/jobs/companies/axicom/senior-account-executive-consumer-tech-london-232929",
-   "source": "Arbeitnow",
-   "posted": "2026-11-26T15:55:21+00:00"
+   "title": "Personal Assistant",
+   "company": "Ruby Labs",
+   "location": "Europe",
+   "url": "https://jobicy.com/jobs/164447-personal-assistant",
+   "source": "Jobicy",
+   "posted": "2026-11-26T15:03:32+00:00"
+  },
+  {
+   "title": "Non-Executive Director (Cyprus)",
+   "company": "Ruby Labs",
+   "location": "Cyprus",
+   "url": "https://jobicy.com/jobs/164442-non-executive-director-cyprus",
+   "source": "Jobicy",
+   "posted": "2026-11-26T15:03:23+00:00"
+  },
+  {
+   "title": "Forward Deployed Engineer",
+   "company": "Mattermost",
+   "location": "Canada",
+   "url": "https://jobicy.com/jobs/164428-forward-deployed-engineer-16",
+   "source": "Jobicy",
+   "posted": "2026-11-26T14:53:41+00:00"
   },
   {
    "title": "Associate Director, Music Policy, Spotify for Artists",
@@ -44,44 +108,28 @@
    "posted": "2026-11-26T14:35:12+00:00"
   },
   {
-   "title": "Lead Video Producer (x/f/m)",
-   "company": "Doctolib",
-   "location": "Paris",
-   "url": "https://www.arbeitnow.fr/jobs/companies/doctolib/lead-video-producer-levallois-perret-319144",
-   "source": "Arbeitnow",
-   "posted": "2026-11-26T09:40:16+00:00"
+   "title": "Security Engineer",
+   "company": "Fever",
+   "location": "Spain",
+   "url": "https://jobicy.com/jobs/164365-security-engineer-4",
+   "source": "Jobicy",
+   "posted": "2026-11-26T11:48:03+00:00"
   },
   {
-   "title": "Focus Entertainment Publishing - Communication Director (H/F/Nb)",
-   "company": "Pullup Entertainment",
-   "location": "Paris, Île-de-France, France",
-   "url": "https://www.arbeitnow.fr/jobs/companies/pullup-entertainment/focus-entertainment-publishing-communication-director-b-paris-387828",
-   "source": "Arbeitnow",
-   "posted": "2026-11-26T03:51:53+00:00"
+   "title": "GRC Engineer",
+   "company": "Fever",
+   "location": "Spain",
+   "url": "https://jobicy.com/jobs/164363-grc-engineer",
+   "source": "Jobicy",
+   "posted": "2026-11-26T11:47:42+00:00"
   },
   {
-   "title": "Focus Entertainment - Stage - Media Buying Assistant (H/F/Nb)",
-   "company": "Pullup Entertainment",
-   "location": "Paris, Île-de-France, France",
-   "url": "https://www.arbeitnow.fr/jobs/companies/pullup-entertainment/focus-entertainment-stage-media-buying-assistant-b-paris-68645",
-   "source": "Arbeitnow",
-   "posted": "2026-11-26T03:51:53+00:00"
-  },
-  {
-   "title": "(Senior) Account Executive (m/w/d) - im Bereich Technology",
-   "company": "Bursonglobalcareers",
-   "location": "Frankfurt am Main, Hesse",
-   "url": "https://www.arbeitnow.com/jobs/companies/bursonglobalcareers/senior-account-executive-im-bereich-technology-frankfurt-am-main-hesse-270950",
-   "source": "Arbeitnow",
-   "posted": "2026-11-25T21:55:39+00:00"
-  },
-  {
-   "title": "Head of Technology Practice",
-   "company": "Bursonglobalcareers",
-   "location": "Paris, Paris",
-   "url": "https://www.arbeitnow.fr/jobs/companies/bursonglobalcareers/head-of-technology-practice-paris-paris-438178",
-   "source": "Arbeitnow",
-   "posted": "2026-11-25T21:55:34+00:00"
+   "title": "Cybersecurity Engineer",
+   "company": "Fever",
+   "location": "Spain",
+   "url": "https://jobicy.com/jobs/164359-cybersecurity-engineer-2",
+   "source": "Jobicy",
+   "posted": "2026-11-26T11:47:36+00:00"
   },
   {
    "title": "Crux - Video and Audio Raters - German (Germany)",
@@ -132,12 +180,44 @@
    "posted": "2026-11-25T13:20:12+00:00"
   },
   {
-   "title": "Content Producer/in Social Media (100 %)",
-   "company": "two.jobs",
-   "location": "Zürich",
-   "url": "https://www.arbeitnow.ch/jobs/companies/twojobs/content-producer-in-social-media-100-zurich-483196",
-   "source": "Arbeitnow",
-   "posted": "2026-11-24T11:00:44+00:00"
+   "title": "Counsel, Commercial & Product",
+   "company": "SeatGeek",
+   "location": "USA",
+   "url": "https://jobicy.com/jobs/164191-counsel-commercial-product",
+   "source": "Jobicy",
+   "posted": "2026-11-24T18:53:28+00:00"
+  },
+  {
+   "title": "Client Success Manager",
+   "company": "SeatGeek",
+   "location": "USA",
+   "url": "https://jobicy.com/jobs/164186-client-success-manager-6",
+   "source": "Jobicy",
+   "posted": "2026-11-24T18:53:06+00:00"
+  },
+  {
+   "title": "Strategic Account Manager - UK",
+   "company": "SeatGeek",
+   "location": "UK",
+   "url": "https://jobicy.com/jobs/164139-strategic-account-manager-uk",
+   "source": "Jobicy",
+   "posted": "2026-11-24T14:44:04+00:00"
+  },
+  {
+   "title": "Account Manager - UK",
+   "company": "SeatGeek",
+   "location": "UK",
+   "url": "https://jobicy.com/jobs/164134-account-manager-uk",
+   "source": "Jobicy",
+   "posted": "2026-11-24T14:43:55+00:00"
+  },
+  {
+   "title": "Generative Motion Artist",
+   "company": "Moon Active",
+   "location": "Spain",
+   "url": "https://jobicy.com/jobs/164045-generative-motion-artist",
+   "source": "Jobicy",
+   "posted": "2026-11-24T09:29:04+00:00"
   },
   {
    "title": "International Audio/Video Remote Hakha Chin Interpreter",
@@ -164,6 +244,38 @@
    "posted": "2026-11-24T04:25:11+00:00"
   },
   {
+   "title": "Senior Data Analyst",
+   "company": "Ruby Labs",
+   "location": "Europe",
+   "url": "https://jobicy.com/jobs/143979-senior-data-analyst-4",
+   "source": "Jobicy",
+   "posted": "2026-11-23T03:25:09+00:00"
+  },
+  {
+   "title": "Tech Lead",
+   "company": "Fever",
+   "location": "Brazil",
+   "url": "https://jobicy.com/jobs/163838-tech-lead-3",
+   "source": "Jobicy",
+   "posted": "2026-11-22T11:53:24+00:00"
+  },
+  {
+   "title": "Customer Service Agent: Spanish (12:00 - 21:00)",
+   "company": "Fever",
+   "location": "Brazil",
+   "url": "https://jobicy.com/jobs/163835-customer-service-agent-spanish-1200-2100",
+   "source": "Jobicy",
+   "posted": "2026-11-22T11:53:09+00:00"
+  },
+  {
+   "title": "Customer Service Agent: Korean (morning shift)",
+   "company": "Fever",
+   "location": "Brazil",
+   "url": "https://jobicy.com/jobs/163829-customer-service-agent-korean-morning-shift",
+   "source": "Jobicy",
+   "posted": "2026-11-22T11:52:44+00:00"
+  },
+  {
    "title": "Crux - Video and Audio QA - French (France)",
    "company": "Welo Global",
    "location": "France",
@@ -188,6 +300,22 @@
    "posted": "2026-11-22T05:56:42+00:00"
   },
   {
+   "title": "Staff Full Stack Engineer",
+   "company": "Mattermost",
+   "location": "USA",
+   "url": "https://jobicy.com/jobs/156287-staff-full-stack-engineer",
+   "source": "Jobicy",
+   "posted": "2026-11-22T03:50:25+00:00"
+  },
+  {
+   "title": "Senior Technical Account Manager (Federal)",
+   "company": "Mattermost",
+   "location": "USA",
+   "url": "https://jobicy.com/jobs/156283-senior-technical-account-manager-federal",
+   "source": "Jobicy",
+   "posted": "2026-11-22T03:50:23+00:00"
+  },
+  {
    "title": "Senior Product Manager - Audiobooks Format Foundations",
    "company": "Spotify",
    "location": "Sweden, UK",
@@ -196,20 +324,20 @@
    "posted": "2026-11-21T03:20:36+00:00"
   },
   {
-   "title": "Field CTO, Media & Entertainment AI Infrastructure",
-   "company": "Nebius",
-   "location": "USA",
-   "url": "https://jobicy.com/jobs/163568-field-cto-media-entertainment-ai-infrastructure",
+   "title": "Senior User Acquisition Manager, Paid Social Ads",
+   "company": "Ruby Labs",
+   "location": "Europe",
+   "url": "https://jobicy.com/jobs/156150-senior-user-acquisition-manager-paid-social-ads",
    "source": "Jobicy",
-   "posted": "2026-11-20T16:44:58+00:00"
+   "posted": "2026-11-21T03:15:09+00:00"
   },
   {
-   "title": "Crux - Video and Audio QA - German (Germany)",
-   "company": "Welo Global",
-   "location": "Germany",
-   "url": "https://jobicy.com/jobs/163459-crux-video-and-audio-qa-german-germany",
+   "title": "User Acquisition Manager (Meta & SnapChat)",
+   "company": "Ruby Labs",
+   "location": "Europe, Türkiye",
+   "url": "https://jobicy.com/jobs/150980-user-acquisition-manager-meta-snapchat",
    "source": "Jobicy",
-   "posted": "2026-11-20T08:39:50+00:00"
+   "posted": "2026-11-21T03:00:15+00:00"
   }
  ]
 }
